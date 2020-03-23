@@ -1,0 +1,18 @@
+<div class="content">
+  <div class="columns">
+    <% for customer in @customers %>
+
+      <div class="polaroid">
+        <% if customer.image.present? %>
+          <%= image_tag customer.image, class: "image" %>
+        <% end %>
+
+        <h2><%= customer.full_name %></h2>
+        <p><span class="bold">Province:</span><%= customer.notes %></p>
+        <p><%= customer.phone_number %></p>
+        <p><%= customer.email_address %></p>
+
+      </div>
+    <% end %>
+  </div>
+</div>
